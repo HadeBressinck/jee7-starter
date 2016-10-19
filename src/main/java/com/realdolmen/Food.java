@@ -3,7 +3,7 @@ package com.realdolmen;
 import javax.inject.Inject;
 
 public class Food {
- 
-	@Inject
-	Food food;
+// Careful circular dependency
+//	@Inject
+//	Food food;
 }

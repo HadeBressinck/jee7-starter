@@ -32,6 +32,24 @@ public class TweetForDbTest extends JpaPersistenceTest {
 	}
 
 	@Test
+	public void regularPersonCanBePersisted() throws Exception {
+		RegularPerson1 p = new RegularPerson1(null, "Jimi", "Hendrix", "password", "jimi@gmail.com");
+		entityManager().persist(p);
+		entityManager().flush();
+		entityManager().clear();
+		assertNotNull(entityManager().find(RegularPerson1.class, p.getId()));
+	}
+
+	@Test
+	public void verifiedPersonCanBePersisted() throws Exception {
+		VerifiedPerson1 p = new VerifiedPerson1("Janis", "Joplin", "password", "janis@gmail.com", LocalDateTime.of(1946, 10, 15, 16, 32, 54), 1547854L, 23456);
+		entityManager().persist(p);
+		entityManager().flush();
+		entityManager().clear();
+		assertNotNull(entityManager().find(VerifiedPerson1.class, p.getId()));
+	}
+
+	@Test
 	public void tweetCanBePersistedWithTag() throws Exception {
 		EntityManager em = entityManager();
 		List<Tag> list = new ArrayList<Tag>();

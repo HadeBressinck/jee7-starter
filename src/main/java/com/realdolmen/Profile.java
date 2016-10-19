@@ -2,10 +2,7 @@ package com.realdolmen;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Profile {
@@ -14,6 +11,8 @@ public class Profile {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String ageCategory;
+
+	@ElementCollection
 	private List<String> intrest;
 	private String familyState;
 

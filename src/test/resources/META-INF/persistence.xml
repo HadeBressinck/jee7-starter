@@ -40,7 +40,10 @@
 		<class>com.realdolmen.course.domain.Person</class>
 		<class>com.realdolmen.TweetForDb</class>
 		<class>com.realdolmen.Person1</class>
+		<class>com.realdolmen.RegularPerson1</class>
+		<class>com.realdolmen.VerifiedPerson1</class>
 		<class>com.realdolmen.Tag</class>
+		<class>com.realdolmen.Profile</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
