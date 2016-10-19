@@ -12,6 +12,7 @@ public class Demo {
 	@Test
 	public void testWeldWorks() {		
 		Weld weld = new Weld();
+		//weld.packages("com.realdolmen");
 		WeldContainer container = weld.initialize();
 		PersonServiceBean psb = container.instance().select(PersonServiceBean.class).get();
 		System.out.println(psb);

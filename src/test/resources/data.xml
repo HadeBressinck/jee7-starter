@@ -1,4 +1,19 @@
 <dataset>
-    <person id="1000" firstName="John" lastName="Doe"/>
-    <person id="2000" firstName="Jane" lastName="Doe"/>
+	<person1 dtype="RegularPerson1" id="1000" firstName="John"
+		lastName="Doe" password="1234" email="dummy" />
+	<person1 dtype="RegularPerson1" id="2000" firstName="Jane"
+		lastName="Doe" password="1234" email="dummy" />
+
+	<tag id="1000" name="rdproud" />
+
+	<tweetForDb id="1000" message="I see purple haze"
+		person1_id="1000" />
+	<tweetForDb id="2000" message="Oh lord,I'd like a mercedes benz! "
+		person1_id="1000" />
+	<tweetForDb id="3000" message="I see riders on the storm"
+		person1_id="2000" />
+
+
+	<Jnd_TweetForDb_Tag TweetForDb_fk="1000" Tag_fk="1000" />
+
 </dataset>

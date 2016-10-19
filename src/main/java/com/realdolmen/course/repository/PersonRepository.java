@@ -10,11 +10,11 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
-public class PersonRepository {
+public class PersonRepository { // = een DAO
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @PersistenceContext
-    EntityManager em;
+    EntityManager em; //gateway nr db
 
     public Person save(Person person) {
         em.persist(person);
